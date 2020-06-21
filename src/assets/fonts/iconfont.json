@@ -1,0 +1,23 @@
+{
+  "id": "1897085",
+  "name": "hela",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon",
+  "description": "ad",
+  "glyphs": [
+    {
+      "icon_id": "15455304",
+      "name": "user",
+      "font_class": "user",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    },
+    {
+      "icon_id": "15455306",
+      "name": "password",
+      "font_class": "password",
+      "unicode": "e602",
+      "unicode_decimal": 58882
+    }
+  ]
+}
