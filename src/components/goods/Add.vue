@@ -64,7 +64,6 @@
                   value: 'cat_id',
                   children: 'children'
                 }"
-                @change="handleChange"
               ></el-cascader>
             </el-form-item>
           </el-tab-pane>
@@ -188,12 +187,11 @@ export default {
       }
 
       this.cateList = res.data
-      console.log(this.cateList)
     },
     // 级联选择器选中项变化触发
-    handleChange() {
-      console.log(this.addForm.goods_cat)
-    },
+    // handleChange() {
+    //   console.log(this.addForm.goods_cat)
+    // },
     beforeTabLeave(actvieName, oldActiveName) {
       if (oldActiveName === '0' && this.addForm.goods_cat.length !== 3) {
         this.$message.error('请先选择商品分类')
@@ -214,7 +212,6 @@ export default {
           return this.$message.error('获取动态参数列表失败！')
         }
 
-        console.log(res.data)
         res.data.forEach(item => {
           item.attr_vals =
             item.attr_vals.length === 0 ? [] : item.attr_vals.split(',')
@@ -232,32 +229,26 @@ export default {
           return this.$message.error('获取静态属性失败！')
         }
 
-        console.log(res.data)
         this.onlyTableData = res.data
       }
     },
     // 处理图片预览效果
     handlePreview(file) {
-      console.log(file)
       this.previewPath = file.response.data.url
       this.previewVisible = true
     },
     // 处理移除图片的操作
     handleRemove(file) {
-      console.log(file)
       const filePath = file.response.data.tmp_path
       const i = this.addForm.pics.findIndex(x => x.pic === filePath)
       this.addForm.pics.splice(i, 1)
-      console.log(this.addForm)
     },
     // 监听图片上传成功的事件
     handleSuccess(response, file) {
-      console.log(file)
       // 1.拼接得到一个图片信息对象
       // 2.将图片信息对象push到pics数组中
       const picInfo = { pic: response.data.tmp_path }
       this.addForm.pics.push(picInfo)
-      console.log(this.addForm)
     },
     add() {
       this.$refs.addFormRef.validate(async valid => {

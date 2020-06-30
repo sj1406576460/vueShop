@@ -224,7 +224,7 @@ export default {
         // 当前的页数
         pagenum: 1,
         // 当前每页显示多少条数据
-        pagesize: 2
+        pagesize: 5
       },
       userList: [],
       total: 0,
@@ -323,7 +323,6 @@ export default {
       this.getUserList()
     },
     async userStateChanged(userInfo) {
-      console.log(userInfo)
       const { data: res } = await this.$http.put(
         `users/${userInfo.id}/state/${userInfo.mg_state}`
       )

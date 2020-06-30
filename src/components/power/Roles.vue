@@ -179,7 +179,6 @@ export default {
       }
 
       this.rolesList = res.data
-      console.log(this.roles)
     },
     async showEditRoles(id) {
       const { data: res } = await this.$http.get(`roles/${id}`)
@@ -198,7 +197,6 @@ export default {
           roleDesc: this.editForm.roleDesc
         }
       )
-      console.log(res)
 
       if (res.meta.status !== 200) {
         return this.$message.error('修改角色信息失败！')
