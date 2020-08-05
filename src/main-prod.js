@@ -11,7 +11,7 @@ import VueQuillEditor from 'vue-quill-editor'
 
 import NProgress from 'nprogress'
 
-axios.defaults.baseURL = 'http://sleepdevil.top:8888/api/private/v1/'
+axios.defaults.baseURL = 'http://127.0.0.1:8888/api/private/v1/'
 // 在request拦截器中展示进度条nprogress.start
 axios.interceptors.request.use(config => {
   NProgress.start()
