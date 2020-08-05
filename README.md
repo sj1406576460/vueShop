@@ -1,24 +1,3 @@
-# vue_project
+## 一个电商后台管理系统，使用技术：Vue + VueRouter+ ElementUI + axios + express + mysql
 
-## Project setup
-```
-yarn install
-```
-
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
-
-### Compiles and minifies for production
-```
-yarn build
-```
-
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## 在线演示：[sleepdevil.top](http://sleepdevil.top)
